@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Montador de Móveis | Pontual, Caprichoso e de Confiança</title>
+  <meta name="description" content="Montagem de móveis residenciais e comerciais com rapidez, segurança e capricho. Guarda-roupas, cozinhas, painéis, racks, mesas, escritórios e mais." />
+  <meta name="theme-color" content="#0f766e">
+  <meta property="og:title" content="Montagem de Móveis com Pontualidade e Capricho" />
+  <meta property="og:description" content="Atendimento em domicílio. Orçamento pelo WhatsApp. Guarda-roupas, cozinhas, painéis, racks, mesas e mais." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/img/capa.jpg" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --brand:#0f766e; /* verde petróleo */
+      --brand-2:#134e4a; /* tom escuro */
+      --bg:#0b1324; /* fundo suave escuro */
+      --text:#0f172a; /* slate-900 */
+      --muted:#475569; /* slate-600 */
+      --light:#f8fafc; /* slate-50 */
+      --card:#ffffff;
+      --ring: rgba(15,118,110,.25);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;color:var(--text);background:#f3f4f6}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:800}
+    .brand .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#22c55e);display:grid;place-items:center;color:#fff;font-weight:900}
+    .menu{display:flex;gap:18px}
+    .menu a{font-size:14px;text-decoration:none;color:#111827;opacity:.85}
+    .menu a:hover{opacity:1}
+    .cta{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;border:none;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700}
+    .cta:hover{filter:brightness(1.05)}
+    .cta:focus{outline:3px solid var(--ring)}
+
+    .hero{background:linear-gradient(180deg,#ecfeff, #ffffff);border-bottom:1px solid #e5e7eb}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#d1fae5;color:#065f46;border:1px solid #a7f3d0;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700}
+    h1{font-size:40px;line-height:1.1;margin:14px 0 12px}
+    .lead{font-size:18px;color:#334155;margin:0 0 20px}
+    .hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+    .hero-card{background:#fff;border:1px solid #e5e7eb;padding:12px;border-radius:16px;font-size:14px;color:#0f172a}
+
+    .section{padding:56px 0}
+    .section h2{font-size:28px;margin:0 0 12px}
+    .muted{color:var(--muted)}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px}
+    .card h3{margin:0 0 6px;font-size:18px}
+
+    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .ph{background:#e2e8f0;border:1px dashed #cbd5e1;height:160px;border-radius:14px;display:grid;place-items:center;color:#64748b;font-weight:700}
+
+    .highlight{background:linear-gradient(180deg,#064e3b, var(--brand-2));color:#ecfeff;border-radius:20px;padding:28px;display:grid;gap:10px}
+
+    .list{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+    .list li{display:flex;gap:10px}
+    .check{width:20px;height:20px;border-radius:6px;background:#10b981;display:grid;place-items:center;color:white;font-weight:900;line-height:1}
+
+    .areas{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:8px 12px;font-size:14px}
+
+    footer{border-top:1px solid #e5e7eb;background:#fff}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:26px 0}
+
+    .whats-float{position:fixed;right:18px;bottom:18px;z-index:60}
+    .whats-float a{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero-cards{grid-template-columns:1fr 1fr}
+      .grid-3{grid-template-columns:1fr}
+      .portfolio{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Montagem de Móveis — Seu Nome",
+    "areaServed": "Sua Cidade e Região",
+    "url": "https://seudominio.com.br",
+    "telephone": "+55 99 99999-9999",
+    "priceRange": "R$",
+    "image": "https://seudominio.com.br/img/capa.jpg",
+    "description": "Montagem de móveis residenciais e comerciais. Guarda-roupas, cozinhas, painéis, racks, mesas e escritórios.",
+    "serviceType": [
+      "Montagem de guarda-roupas",
+      "Montagem de cozinha planejada",
+      "Instalação de painéis e racks",
+      "Ajustes e nivelamento",
+      "Desmontagem e remontagem"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">M</div>
+        <div>
+          <div>Montagem de Móveis</div>
+          <small class="muted">Pontual, caprichoso e de confiança</small>
+        </div>
+      </div>
+      <nav class="menu" aria-label="primária">
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato" class="cta">Orçar pelo WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">✅ Orçamento rápido pelo WhatsApp</div>
+        <h1>Montagem de móveis com <span style="color:var(--brand)">rapidez</span> e <span style="color:var(--brand)">segurança</span></h1>
+        <p class="lead">Guarda-roupas, cozinhas planejadas, painéis, racks, mesas, escritórios e muito mais. Atendimento em domicílio.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="cta" href="https://wa.me/5599999999999?text=Olá!%20Quero%20um%20orçamento%20de%20montagem%20de%20móveis." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
+            💬 Falar no WhatsApp
+          </a>
+          <a class="cta" style="background:#111827" href="#portfolio">📸 Ver trabalhos</a>
+        </div>
+        <div class="hero-cards" aria-hidden="true">
+          <div class="hero-card">🧰 Profissional com ferramentas completas</div>
+          <div class="hero-card">🕒 Pontualidade e cuidado com o imóvel</div>
+          <div class="hero-card">🧽 Limpeza ao finalizar o serviço</div>
+        </div>
+      </div>
+      <div>
+        <div class="highlight" role="img" aria-label="Foto ilustrativa de montagem de móvel">
+          <strong>Precisa montar hoje?</strong>
+          <span>Envie fotos e o modelo do móvel. Respondemos com o orçamento em minutos pelo WhatsApp.</span>
+          <small class="muted">Atendimento: Seg–Sáb · 08h–18h</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <h2>Serviços</h2>
+      <p class="muted">Montagem e instalação nos padrões do fabricante, com garantia de serviço.</p>
+      <div class="grid-3" aria-label="lista de serviços">
+        <div class="card">
+          <h3>Guarda-roupas e closets</h3>
+          <ul class="list">
+            <li><span class="check">✓</span><span>Portas de correr e bater</span></li>
+            <li><span class="check">✓</span><span>Correção de prumo e nivelamento</span></li>
+            <li><span class="check">✓</span><span>Fixação segura em parede</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Cozinhas planejadas</h3>
+          <ul class="list">
+            <li><span class="check">✓</span><span>Montagem de módulos e ferragens</span></li>
+            <li><span class="check">✓</span><span>Ajustes de portas e gavetas</span></li>
+            <li><span class="check">✓</span><span>Instalação de puxadores e dobradiças</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Painéis, racks e escritórios</h3>
+          <ul class="list">
+            <li><span class="check">✓</span><span>Instalação de painéis e suportes</span></li>
+            <li><span class="check">✓</span><span>Mesas, cadeiras e estantes</span></li>
+            <li><span class="check">✓</span><span>Montagem de home office completo</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfólio -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <h2>Portfólio (antes & depois)</h2>
+      <p class="muted">Substitua os blocos cinza pelas suas fotos reais para passar mais confiança.</p>
+      <div class="portfolio">
+        <div class="ph">Sua Foto 1</div>
+        <div class="ph">Sua Foto 2</div>
+        <div class="ph">Sua Foto 3</div>
+        <div class="ph">Sua Foto 4</div>
+        <div class="ph">Sua Foto 5</div>
+        <div class="ph">Sua Foto 6</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avaliações -->
+  <section class="section" id="avaliacoes" style="padding-top:0">
+    <div class="container">
+      <div class="highlight">
+        <h2 style="margin:0">Avaliações de clientes</h2>
+        <p style="margin:0" class="muted">Cole aqui frases curtas de clientes que já atenderam você.</p>
+        <div class="grid-3">
+          <div class="card"><em>“Pontual e muito caprichoso. Montou meu guarda-roupa e deixou tudo limpo.”</em><br><small>— Carla M.</small></div>
+          <div class="card"><em>“Preço justo, serviço rápido. Recomendo!”</em><br><small>— João P.</small></div>
+          <div class="card"><em>“Montou a cozinha planejada com perfeição. Ótimo atendimento.”</em><br><small>— Renata A.</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Áreas atendidas -->
+  <section class="section" id="areas">
+    <div class="container">
+      <h2>Áreas de atendimento</h2>
+      <p class="muted">Atualize com sua cidade, bairros e municípios próximos.</p>
+      <div class="areas">
+        <span class="tag">Centro</span>
+        <span class="tag">Bairro 1</span>
+        <span class="tag">Bairro 2</span>
+        <span class="tag">Município Vizinho</span>
+        <span class="tag">Até 30 km</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="section" id="contato">
+    <div class="container">
+      <h2>Fale agora pelo WhatsApp</h2>
+      <p class="muted">Clique no botão e envie fotos/modelo do móvel para orçamento rápido.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="cta" href="https://wa.me/5599999999999?text=Olá!%20Quero%20um%20orçamento%20de%20montagem%20de%20móveis." target="_blank" rel="noopener">💬 WhatsApp: (99) 99999‑9999</a>
+        <a class="cta" style="background:#0ea5e9" href="tel:+5599999999999">📞 Ligar agora</a>
+        <a class="cta" style="background:#16a34a" href="https://maps.google.com/?q=Sua%20Cidade" target="_blank" rel="noopener">📍 Ver no mapa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Montagem de Móveis</strong><br>
+        <small class="muted">CNPJ/CPF: 000.000.000-00 · Atendimento Seg–Sáb · 08h–18h</small>
+      </div>
+      <div style="text-align:right">
+        <small class="muted">© <span id="y"></span> — Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <div class="whats-float">
+    <a href="https://wa.me/5599999999999?text=Olá!%20Quero%20um%20orçamento%20de%20montagem%20de%20móveis." target="_blank" rel="noopener" aria-label="WhatsApp flutuante">💬 WhatsApp agora</a>
+  </div>
+
+  <script>
+    // Atualiza ano do rodapé
+    document.getElementById('y').textContent = new Date().getFullYear()
+  </script>
+</body>
+</html>
