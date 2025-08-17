@@ -289,5 +289,44 @@
     // Atualiza ano do rodapé
     document.getElementById('y').textContent = new Date().getFullYear()
   </script>
+<script>
+  // ====== Métricas de cliques ======
+  // 1) Clique nos links que levam à seção #contato (menu/topo/botões internos)
+  document.querySelectorAll('a[href="#contato"]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (typeof gtag === 'function') {
+        gtag('event', 'clique_botao_contato', {
+          event_category: 'Botao',
+          event_label: 'Ir para seção Contato'
+        });
+      }
+    });
+  });
+
+  // 2) Clique em links do WhatsApp (qualquer <a href="https://wa.me/...">)
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (typeof gtag === 'function') {
+        gtag('event', 'whatsapp_click', {
+          event_category: 'Contato',
+          event_label: (el.textContent || 'whatsapp').trim()
+        });
+      }
+    });
+  });
+
+  // 3) Clique em "Ligar agora" (qualquer <a href="tel:...">)
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (typeof gtag === 'function') {
+        gtag('event', 'ligacao_click', {
+          event_category: 'Contato',
+          event_label: (el.textContent || 'telefone').trim()
+        });
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
